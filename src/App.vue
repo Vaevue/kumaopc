@@ -23,7 +23,7 @@ export default {
     if (this._isMobile()) {
       location.href = 'https://vaevue.github.io/kumaoyd/dist/index.html'
     }else {
-      
+      return 
     }
   }
 }
