@@ -112,7 +112,7 @@ import {mapActions,mapMutations,mapGetters} from 'vuex'
 		    return oTime
 		},
 		getgedan(){
-				this.$ajax.get('https://musicapi.leanapp.cn/playlist/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/playlist/detail',{
 					params:{
 						id:this.userlike.id
 					}

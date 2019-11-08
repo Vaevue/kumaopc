@@ -33,7 +33,7 @@ import pl from '../common/vue/pl.vue'
 		getmvurl(){
 			this.mv = this.mvid.id
 			//mv 播放地址
-			this.$ajax.get('https://musicapi.leanapp.cn/mv/detail',{
+			this.$ajax.get('http://140.143.128.100:3000/mv/detail',{
 					params:{
 						mvid:this.mv.id
 					}
@@ -45,7 +45,7 @@ import pl from '../common/vue/pl.vue'
 		//mv评论
 		getpl(){
 
-			this.$ajax.get('https://musicapi.leanapp.cn/comment/mv',{
+			this.$ajax.get('http://140.143.128.100:3000/comment/mv',{
 						params:{
 							id:this.mv.id,
 							limit:30,

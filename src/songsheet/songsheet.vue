@@ -84,7 +84,7 @@ import {mapMutations} from 'vuex'
 				})
 			},
 			fyshuju(list){
-				this.$ajax.get('https://musicapi.leanapp.cn/top/playlist',{
+				this.$ajax.get('http://140.143.128.100:3000/top/playlist',{
 					params:{
 						offset:this.page,
 						limit:30,
@@ -106,7 +106,7 @@ import {mapMutations} from 'vuex'
 				this.getgedanlist()
 			},
 			getgedanfenlei(){
-				this.$ajax.get('https://musicapi.leanapp.cn/playlist/catlist').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/playlist/catlist').then((res) => {
 					this.categories = res.data.categories
 					var arr = res.data.sub
 					for(let i =0;i<arr.length;i++){
@@ -135,7 +135,7 @@ import {mapMutations} from 'vuex'
 				}
 			},
 			getgedanlist(){
-				this.$ajax.get('https://musicapi.leanapp.cn/top/playlist',{
+				this.$ajax.get('http://140.143.128.100:3000/top/playlist',{
 					params:{
 						offset:this.page * 30,
 						limit:30,

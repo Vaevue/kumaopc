@@ -45,7 +45,7 @@ import {mapMutations} from 'vuex'
      
     },
  	gethopst() {
- 	 this.$ajax.get('https://musicapi.leanapp.cn/personalized?limit=10').then((res) => {
+ 	 this.$ajax.get('http://140.143.128.100:3000/personalized?limit=10').then((res) => {
     console.log(res.data.result)
      this.hotge =  res.data.result
     }).catch(() => {

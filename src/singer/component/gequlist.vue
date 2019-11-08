@@ -75,7 +75,7 @@
 		},
 		methods : {
 			gomv(item){
-				this.$ajax.get('https://musicapi.leanapp.cn/mv/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/mv/detail',{
 					params:{
 						mvid:item.mv
 					}
@@ -121,14 +121,14 @@
 				})
 			},
 			gequ(){	
-			this.$ajax.get('https://musicapi.leanapp.cn/artist/album',{
+			this.$ajax.get('http://140.143.128.100:3000/artist/album',{
 				params:{
 					id:this.singer.id
 				}
 			}).then((resa) => {
 				console.log(resa.data)
 			})		
-				this.$ajax.get('https://musicapi.leanapp.cn/artists',{
+				this.$ajax.get('http://140.143.128.100:3000/artists',{
 					params: {
 						id:this.singer.id
 					}

@@ -72,7 +72,7 @@ import {mapGetters,mapMutations} from 'vuex'
 				this.flag = true
 			},
 			login(){
-				this.$ajax.get('https://musicapi.leanapp.cn/login/cellphone',{
+				this.$ajax.get('http://140.143.128.100:3000/login/cellphone',{
 					params: {
 						phone:  this.phone,
 						password: this.password
@@ -95,7 +95,7 @@ import {mapGetters,mapMutations} from 'vuex'
 				})
 			},
 			searchwotex(){
-				this.$ajax.get('https://musicapi.leanapp.cn/search',{
+				this.$ajax.get('http://140.143.128.100:3000/search',{
 					params:{
 						keywords : this.search
 					}

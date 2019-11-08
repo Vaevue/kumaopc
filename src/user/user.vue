@@ -100,7 +100,7 @@ import userlikeq from './components/userlikeq.vue'
 			},
 
 			getuserinfo(){
-				this.$ajax.get('https://musicapi.leanapp.cn/user/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/user/detail',{
 					params:{
 						uid:this.singer.accountId
 					}
@@ -113,7 +113,7 @@ import userlikeq from './components/userlikeq.vue'
 				this.flag = true
 			},
 			getuserdj(){
-				this.$ajax.get('https://musicapi.leanapp.cn/user/dj',{
+				this.$ajax.get('http://140.143.128.100:3000/user/dj',{
 					params:{
 						uid:this.singer.accountId
 					}
@@ -126,7 +126,7 @@ import userlikeq from './components/userlikeq.vue'
 				})
 			},
 			getuserlike(){
-				this.$ajax.get('https://musicapi.leanapp.cn/user/playlist',{
+				this.$ajax.get('http://140.143.128.100:3000/user/playlist',{
 					params:{
 						uid:this.singer.accountId
 					}

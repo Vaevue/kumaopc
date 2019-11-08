@@ -74,7 +74,7 @@ import {playgedan} from '../common/js/song.js'
 		},
 		methods :{
 			gomv(list){
-				this.$ajax.get('https://musicapi.leanapp.cn/mv/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/mv/detail',{
 					params:{
 						mvid:list.mv
 					}
@@ -87,7 +87,7 @@ import {playgedan} from '../common/js/song.js'
 				})
 			},
 			gettoplistinfo(){
-				this.$ajax.get('https://musicapi.leanapp.cn/playlist/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/playlist/detail',{
 					params:{
 						id : 19723756
 					}
@@ -104,7 +104,7 @@ import {playgedan} from '../common/js/song.js'
         return `${m}:${s}`
       		},
 			gettoplist(){
-				this.$ajax.get('https://musicapi.leanapp.cn/toplist').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/toplist').then((res) => {
 					this.toplisttitle = res.data.list
 				})
 
@@ -142,7 +142,7 @@ import {playgedan} from '../common/js/song.js'
 				this.infos = item
 				console.log(item)
 				this.time = this.formatDateTime(this.infos.trackUpdateTime)
-				this.$ajax.get('https://musicapi.leanapp.cn/playlist/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/playlist/detail',{
 					params:{
 						id:item.id
 					}

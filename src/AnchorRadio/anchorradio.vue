@@ -96,7 +96,7 @@ import userdj from '../user/components/userdj.vue'
 		},
 		methods:{
 			gouser(item){
-				this.$ajax.get('https://musicapi.leanapp.cn/dj/program/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/dj/program/detail',{
 					params:{
 						id:item.id
 					}
@@ -124,7 +124,7 @@ import userdj from '../user/components/userdj.vue'
 				lis[index].children[0].style.backgroundPosition ='-48px 0px'
 			},
 			fl(list,index){
-				this.$ajax.get('https://musicapi.leanapp.cn/dj/program',{
+				this.$ajax.get('http://140.143.128.100:3000/dj/program',{
 					params:{
 						rid : this.listss.id,
 						limit :25,
@@ -141,7 +141,7 @@ import userdj from '../user/components/userdj.vue'
 				return `background:url(${list.picWebUrl}) no-repeat`
 			},
 			getbanner(){
-				this.$ajax.get('https://musicapi.leanapp.cn/dj/catelist').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/dj/catelist').then((res) => {
 					console.log(res.data.categories)
 					let cons = res.data.categories
 					for(var i in cons){
@@ -155,12 +155,12 @@ import userdj from '../user/components/userdj.vue'
 				})
 			},
 			gettuijian(){
-				this.$ajax.get('https://musicapi.leanapp.cn/dj/recommend').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/dj/recommend').then((res) => {
 					this.djRadios = res.data.djRadios
 				})
 			},
 			gethot(){
-				this.$ajax.get('https://musicapi.leanapp.cn/dj/hot',{
+				this.$ajax.get('http://140.143.128.100:3000/dj/hot',{
 					params:{
 						limit : 10
 					}
@@ -169,7 +169,7 @@ import userdj from '../user/components/userdj.vue'
 				})
 			},
 			getfltj(){
-				this.$ajax.get('https://musicapi.leanapp.cn/dj/category/excludehot').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/dj/category/excludehot').then((res) => {
 					console.log(res.data)
 				})
 			}

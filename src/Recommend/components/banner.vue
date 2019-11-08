@@ -2,7 +2,7 @@
 	<div>
 <el-carousel indicator-position="outside">
     <el-carousel-item v-for="(item,index) in img" :key="index" :style ='bg(item)'>
-    	<img :src="item.picUrl" alt="">
+    	<img :src="item.imageUrl" alt="">
     </el-carousel-item>
  </el-carousel>
 	</div>
@@ -18,7 +18,7 @@
 
 		methods : {
 			getlblist() {
-				this.$ajax.get('https://musicapi.leanapp.cn/banner').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/banner').then((res) => {
 					this.img = res.data.banners
 					console.log(res.data.banners)
 				}).catch(()=> {

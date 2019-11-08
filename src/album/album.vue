@@ -109,7 +109,7 @@ getzf(num){
      return num;  
  },
  getzhuanjidanqu(){
- 	this.$ajax.get('https://musicapi.leanapp.cn/album',{
+ 	this.$ajax.get('http://140.143.128.100:3000/album',{
  		params:{
  			id:this.item.id
  		}
@@ -120,7 +120,7 @@ getzf(num){
  	console.log(this.album)
  },
   getzhuanjixq(){
- 	this.$ajax.get('https://musicapi.leanapp.cn/album/detail/dynamic',{
+ 	this.$ajax.get('http://140.143.128.100:3000/album/detail/dynamic',{
  		params:{
  			id:this.item.id
  		}
@@ -131,7 +131,7 @@ getzf(num){
  },
  getzhuanjipl(){
  	console.log(this.album.list.id)
- 	this.$ajax.get('https://musicapi.leanapp.cn/comment/album',{
+ 	this.$ajax.get('http://140.143.128.100:3000/comment/album',{
  		params:{
  			id:this.album.list.id,
  			offset:this.page*20

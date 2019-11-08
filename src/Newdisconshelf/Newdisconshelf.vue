@@ -47,7 +47,7 @@ import {mapGetters,mapMutations} from 'vuex'
 				this.$router.push('/index/album')
 			},
 			getlist(){
-				this.$ajax.get('https://musicapi.leanapp.cn/top/album',{
+				this.$ajax.get('http://140.143.128.100:3000/top/album',{
 					params:{
 						limit:30,
 						offset : this.page * 30 

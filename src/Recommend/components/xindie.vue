@@ -47,7 +47,7 @@
 		},
 		methods : {
 			getlist() {
-				this.$ajax.get('https://musicapi.leanapp.cn/top/album?offset=0&limit=12').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/top/album?offset=0&limit=12').then((res) => {
 					console.log(res.data.albums)
 					const arr = res.data.albums
 					for(let i =0;i<arr.length;i++){

@@ -40,7 +40,7 @@ import loading from '../common/vue/loading.vue'
 		},
 	methods:{
 		getsinger() {
-				this.$ajax.get('https://musicapi.leanapp.cn/top/artists?offset=0&limit=100').then((res) => {
+				this.$ajax.get('http://140.143.128.100:3000/top/artists?offset=0&limit=100').then((res) => {
 				res.data.artists.forEach((item,index) => {
 					this.list.push(new Singer({
 						name : item.name,

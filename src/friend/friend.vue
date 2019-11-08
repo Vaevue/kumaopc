@@ -30,7 +30,7 @@ import {mapGetters} from 'vuex'
 			globalBus.$emit('logins')
 		},
 		getdongtai(){
-			this.$ajax.get('https://musicapi.leanapp.cn/event',{
+			this.$ajax.get('http://140.143.128.100:3000/event',{
 				params:{
 					pagesize:30
 				}

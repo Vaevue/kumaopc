@@ -91,7 +91,7 @@ import pl from '../../common/vue/pl.vue'
 			},
 			
 			getpl(){
-				this.$ajax.get('https://musicapi.leanapp.cn/comment/playlist',{
+				this.$ajax.get('http://140.143.128.100:3000/comment/playlist',{
 					params:{
 						id:this.gedan.list.id,
 						offset:this.page * 20
@@ -114,7 +114,7 @@ import pl from '../../common/vue/pl.vue'
 				return ret.join('/')
 			},
 			getgedanlist(){
-				this.$ajax.get('https://musicapi.leanapp.cn/playlist/detail',{
+				this.$ajax.get('http://140.143.128.100:3000/playlist/detail',{
 					params:{
 						id:this.gedan.list.id
 					}

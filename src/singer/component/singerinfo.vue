@@ -49,7 +49,7 @@
 			lists(index){
 				this.currents = index
 				if(index == 1){
-					this.$ajax.get('https://musicapi.leanapp.cn/artist/album',{
+					this.$ajax.get('http://140.143.128.100:3000/artist/album',{
 						params: {
 							id:this.singer.id,
 							limit:50
@@ -59,7 +59,7 @@
 					})
 				}
 				if(index == 2){
-					this.$ajax.get('https://musicapi.leanapp.cn/artist/mv',{
+					this.$ajax.get('http://140.143.128.100:3000/artist/mv',{
 						params:{
 							id:this.singer.id,
 							limit:50
@@ -69,7 +69,7 @@
 					})
 				}
 				if(index == 3){
-					this.$ajax.get('https://musicapi.leanapp.cn/artist/desc',{
+					this.$ajax.get('http://140.143.128.100:3000/artist/desc',{
 						params: {
 							id:this.singer.id
 						}
