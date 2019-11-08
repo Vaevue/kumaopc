@@ -21,13 +21,9 @@ export default {
   created() {
 
     if (this._isMobile()) {
-          console.log(111)
-    console.log(this._isMobile())
       location.href = 'https://vaevue.github.io/kumaoyd/dist/index.html'
-    } else {
-          console.log(111)
-    console.log(this._isMobile())
-   window.location.href = 'https://vaevue.github.io/kumaoPC/dist/index.html'
+    }else {
+      
     }
   }
 }
