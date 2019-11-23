@@ -29,7 +29,7 @@
 				</div>
 			</div>
 		</div>
-		<audio ref ='audio' :src="currSong.url" @end ='end'  @timeupdate = 'uppdata' autoplay></audio>
+		<audio ref ='audio' :src="currSong.url" @ended ='end'  @timeupdate = 'uppdata' autoplay></audio>
 	</div>
 	</transition>
 </template>
